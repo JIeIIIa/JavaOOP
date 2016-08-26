@@ -1,11 +1,11 @@
-package ua.kiev.prog.onishchenko.HomeTasks.Lecture2.Cars;
+package ua.kiev.prog.onishchenko.HomeTasks.Lecture2.Task1_Cars;
 
 public class Climate {
 	private boolean on;
 	private int temperature;
 	
 	public Climate() {
-		temperature = 20; // градусов
+		temperature = 20; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	}
 	
 	public void turnOn() {

@@ -1,4 +1,4 @@
-package ua.kiev.prog.onishchenko.HomeTasks.Lecture2.Cars;
+package ua.kiev.prog.onishchenko.HomeTasks.Lecture2.Task1_Cars;
 
 public class Engine {
     private double mileage;
