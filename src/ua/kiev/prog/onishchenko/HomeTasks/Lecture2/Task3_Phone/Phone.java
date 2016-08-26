@@ -5,9 +5,13 @@ public abstract class Phone {
 	protected boolean touch;
 	protected boolean hasWifi;
 	protected int screenSize;
+    private int cntSms;
+    private int cntCall;
 	
 	public Phone() {
 		System.out.println("Phone constructor");
+        cntCall = 0;
+        cntSms = 0;
 	}
 	
 	public boolean isTouch() {
@@ -23,8 +27,18 @@ public abstract class Phone {
 	}
 	
 	public void call(String number) {
+	    cntCall++;
 		System.out.println("Phone class is calling " + number);
 	}
-	
-	public abstract void sendSMS(String number, String message);
+
+    public abstract void sendSMSAPI(String number, String message);
+
+    public void sendSMS(String number, String message) {
+        cntSms++;
+        sendSMSAPI(number, message);
+    }
+
+    public void statistics() {
+        System.out.println("SMS:  " + cntSms + "     Calls:  " + cntCall);
+    }
 }

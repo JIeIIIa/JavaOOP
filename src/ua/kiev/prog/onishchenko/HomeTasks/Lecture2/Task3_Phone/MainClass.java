@@ -9,7 +9,7 @@ public class MainClass {
 		System.out.println("Nokia3310 screent size: " + nokia.getScreenSize());
 		nokia.call("123-45-67");
 		nokia.sendSMS("567-78-89", "text message");
-		
+		nokia.statistics();
 		System.out.println("----------------------------------");
 		
 		IPhone iphone = new IPhone();
@@ -23,5 +23,7 @@ public class MainClass {
 		System.out.println("IPhone screent size: " + iphone5.getScreenSize());
 		iphone5.call("123-45-67");
 		iphone5.sendSMS("567-78-89", "text message");
+
+
 	}
 }
