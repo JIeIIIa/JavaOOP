@@ -15,7 +15,7 @@ public class IPhone5 extends IPhone {
 	
 	@Override
 	public void sendSMSAPI(String number, String message) {
-		super.sendSMS(number, message);
+		super.sendSMSAPI(number, message);
 		System.out.println("IPhone5 class is sending sms " + message + " to " + number);	
 	}
 }
