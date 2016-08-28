@@ -41,8 +41,13 @@ public class SimplePhone {
         System.out.println("Phone #" + number + " listening You.");
     }
 
-    public void call(String number) {
+    public void call(String number, ATS ats) {
+        if(!registered) {
+            System.out.println("Your phone is not registered in any network");
+            return;
+        }
         System.out.println("#" + this.number + " is calling to #" + number);
+        ats.call(number);
     }
 
     @Override

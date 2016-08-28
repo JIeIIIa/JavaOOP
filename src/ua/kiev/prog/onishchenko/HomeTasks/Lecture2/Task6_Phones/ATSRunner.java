@@ -17,17 +17,17 @@ public class ATSRunner {
         System.out.println(ats);
 
         SimplePhone myPhone = new SimplePhone("555-55-55", false);
-        ats.call(myPhone, "222-11-11");
+        myPhone.call("222-11-11", ats);
         System.out.println("\nAfter register myPhone in Network");
         ats.addPhone(myPhone);
         ats.registerPhone(myPhone.getNumber());
 
-        ats.call(myPhone, "222-11-11");
-        ats.call(myPhone, "333-31-11");
-        ats.call(myPhone, "123-45-67");
+        myPhone.call("222-11-11", ats);
+        myPhone.call("333-31-11", ats);
+        myPhone.call("123-45-67", ats);
         ats.registerPhone("333-31-11");
         System.out.println("Phone #333-31-11 registered.");
-        ats.call(myPhone, "333-31-11");
+        myPhone.call("333-31-11", ats);
     }
 
 }

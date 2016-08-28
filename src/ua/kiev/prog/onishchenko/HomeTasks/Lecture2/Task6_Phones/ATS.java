@@ -51,18 +51,13 @@ public class ATS {
         return null;
     }
 
-    public void call(SimplePhone from, String to) {
-        if(!from.isRegistered()) {
-            System.out.println("Your phone is not registered in any network");
-            return;
-        }
-        from.call(to);
-        SimplePhone simplePhone = find(to);
+    public void call(String number) {
+        SimplePhone simplePhone = find(number);
         if (simplePhone == null) {
-            System.out.println("Unknown number #" + to);
+            System.out.println("Unknown number #" + number);
         } else {
             if (!simplePhone.isRegistered()) {
-                System.out.println("The subscriber #" + to +
+                System.out.println("The subscriber #" + number +
                         "  is not available.");
             } else {
                 simplePhone.answer();
